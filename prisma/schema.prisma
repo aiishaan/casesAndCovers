@@ -12,7 +12,7 @@ model Configuration {
   id String @id @default(cuid())
   width Int
   height Int
-  imgUrl String
+  imageUrl String
   croppedImageUrl String?
 
 }

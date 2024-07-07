@@ -24,15 +24,27 @@ export const ourFileRouter = {
       const {width, height} = imgMetadata
 
       if(!configId){
-        const configuration  = await db.configuration.create({
+        const configuration = await db.configuration.create({
           data : {
-            
+            imageUrl : file.url,
+            height : height || 500,
+            width : width || 500,
           }
         })
+
+        return {configId: configuration.id}
       }
-
-
-      return { configId};
+      else {
+        const updatedConfiguration = await db.configuration.update({
+          where : {
+            id : configId
+          },
+          data : {
+            croppedImageUrl : file.url,
+          }
+        })
+        return {configId : updatedConfiguration.id}
+      }
     }),
 } satisfies FileRouter;
  
