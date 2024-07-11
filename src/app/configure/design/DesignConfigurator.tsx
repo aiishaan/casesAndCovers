@@ -127,6 +127,25 @@ const DesignConfigurator = ({configId, imageUrl, imageDimensions}: DesignConfigu
                                 <Label>
                                     {name.slice(0,1).toUpperCase()+name.slice(1)}
                                 </Label>
+                                <div className="mt-3 space-y-4">
+                                    {selectableOptions.map((option)=> (
+                                        <RadioGroup.Option key={option.value} value={option} className={({active, checked})=> cn("relative block cursor-pointer rounded-lg bg-white px-6 py-4 shadow-sm border-2 border-zinc-200 focus:outline-none ring-0 focus:ring-0 outline-none sm:flex sm:justify-between", {
+                                            "border-primary" : active || checked
+                                        })}>
+                                            <span className="flex items-center">
+                                                <span className="flex flex-col text-sm">
+                                                    <RadioGroup.Label className="font-medium text-gray-900" as="span">
+                                                        {option.label}
+                                                    </RadioGroup.Label>
+
+                                                    {option.description ? <RadioGroup.Description as="span" className="text-gray-500">
+                                                        <span className="block sm: inline">{option.description}</span>
+                                                    </RadioGroup.Description> : null}
+                                                </span>
+                                            </span>
+                                        </RadioGroup.Option>
+                                    ))}
+                                </div>
                             </RadioGroup>
                         ))}
                         </div>
