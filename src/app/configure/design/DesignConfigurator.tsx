@@ -7,8 +7,11 @@ import NextImage from "next/image"
 import {Rnd} from "react-rnd"
 import {RadioGroup} from "@headlessui/react"
 import { useState } from "react"
-import { COLORS } from "@/validators/option-validator"
+import { COLORS, MODELS } from "@/validators/option-validator"
 import { Label } from "@/components/ui/label"
+import { DropdownMenu, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
+import { Button } from "@/components/ui/button"
+import { ChevronsUpDown } from "lucide-react"
 
 interface DesignConfiguratorProps{
     configId : string,
@@ -20,8 +23,10 @@ const DesignConfigurator = ({configId, imageUrl, imageDimensions}: DesignConfigu
 
     const[options, setOptions] = useState<{
         color : (typeof COLORS)[number]
+        model : (typeof MODELS.options)[number]
     }>({
         color: COLORS[0],
+        model : MODELS.options[0]
     })
     return <div className="relative mt-20 grid grid-cols-3 mb-20 pb-20">
         <div className="relative h-[37.5rem] overflow-hidden col-span-2 w-full max-w-4xl flex items-center justify-center rounded-lg border-2 border-dashed border-gray-300 p-12 text-center focus: outline-none focus: ring-2 focus:ring-primary focus:ring-offset-2">
@@ -86,6 +91,15 @@ const DesignConfigurator = ({configId, imageUrl, imageDimensions}: DesignConfigu
 
                         <div className="relative flex flex-col gap-3 w-full">
                             <Label>Model</Label>
+                            <DropdownMenu>
+                                <DropdownMenuTrigger asChild>
+                                    <Button variant="outline" role="combobox" className="w-full justify-between">
+                                        {options.model.label}
+                                        <ChevronsUpDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
+                                    </Button>
+                                </DropdownMenuTrigger>
+                                
+                            </DropdownMenu>
                         </div>
                         </div>
                     </div>
