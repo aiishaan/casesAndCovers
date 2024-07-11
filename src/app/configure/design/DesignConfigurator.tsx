@@ -63,6 +63,7 @@ const DesignConfigurator = ({configId, imageUrl, imageDimensions}: DesignConfigu
                     <div className="w-full h-px bg-zinc-200 my-6" />
 
                     <div className="relative mt-4 h-full flex flex-col justify-between">
+                        <div className=" flex flex-col gap-6">
                         <RadioGroup value={options.color} onChange={(val)=> {
                             setOptions((prev)=> ({
                                 ...prev,
@@ -82,6 +83,11 @@ const DesignConfigurator = ({configId, imageUrl, imageDimensions}: DesignConfigu
                                 ))}
                             </div>
                         </RadioGroup>
+
+                        <div className="relative flex flex-col gap-3 w-full">
+                            <Label>Model</Label>
+                        </div>
+                        </div>
                     </div>
                 </div>
             </ScrollArea>
