@@ -11,7 +11,7 @@ import { COLORS, FINISHES, MATERIALS, MODELS } from "@/validators/option-validat
 import { Label } from "@/components/ui/label"
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
 import { Button } from "@/components/ui/button"
-import { Check, ChevronsUpDown } from "lucide-react"
+import { ArrowRight, Check, ChevronsUpDown } from "lucide-react"
 import { BASE_PRICE } from "@/config/products"
 
 interface DesignConfiguratorProps{
@@ -166,6 +166,10 @@ const DesignConfigurator = ({configId, imageUrl, imageDimensions}: DesignConfigu
                         <p className="font-medium whitespace-nowrap">
                             {formatPrice((BASE_PRICE + options.finish.price + options.material.price)/100)}
                         </p>
+                        <Button size="sm" className="w-full">
+                            Continue
+                            <ArrowRight  className="h-4 w-4 ml-1.5 inline"/>
+                        </Button>
                     </div>
                 </div>
             </div>
