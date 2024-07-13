@@ -1,5 +1,6 @@
 import { db } from "@/db"
 import { notFound } from "next/navigation"
+import DesignPreview from "./DesignPreview"
 
 interface PageProps {
     searchParams : {
@@ -23,6 +24,8 @@ const Page = async ({searchParams}: PageProps) => {
     if(!configuration){
         return notFound()
     }
+
+    return <DesignPreview />
 
 }
 
