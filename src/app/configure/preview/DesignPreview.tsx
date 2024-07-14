@@ -12,10 +12,11 @@ import Confetti from "react-dom-confetti"
 
 const DesignPreview = ({configuration} : {configuration : Configuration}) => {
 
+
     const [showConfetti, setShowConfetti] = useState(false)
     useEffect(()=> {
         setShowConfetti(true)
-    })
+    },)
 
     const {color, model, finish, material} = configuration
     const tw = COLORS.find((supportedColor) => supportedColor.value === color)?.tw
