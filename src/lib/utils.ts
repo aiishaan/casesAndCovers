@@ -43,6 +43,7 @@ export function constructMetaData({
       images: [image],
       creator: "@sannpanis"
     },
-    icons
+    icons,
+    metadataBase : new URL("https://casesandcovers.vercel.app/")
   }
 }
