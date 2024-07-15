@@ -1,36 +1,112 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# CasesAndCovers
+
+CasesAndCovers is an e-commerce store that allows users to create their own phone cases using custom images and purchase them. This project is built with modern web technologies to provide a seamless and engaging user experience.
+
+## Live Demo
+
+Check out the live site: [CasesAndCovers](https://casesandcovers.vercel.app/)
+
+## Tech Stack
+
+- **Frontend**: [Next.js](https://nextjs.org/)
+- **Database**: [NeonDB](https://neon.tech/)
+- **ORM**: [Prisma](https://www.prisma.io/)
+- **Authentication**: [Kinde](https://kinde.com/)
+- **Image Uploads**: [Upload Thing](https://uploadthing.com/)
+- **Payments**: [Stripe](https://stripe.com/)
+
+## Features
+
+- **Custom Phone Case Creation**: Users can upload their own images to create personalized phone cases.
+- **Secure Authentication**: User authentication is handled with Kinde for a secure and seamless login experience.
+- **Fast and Reliable Database**: NeonDB and Prisma are used for efficient data management and retrieval.
+- **Image Uploads**: Upload Thing is integrated for handling custom image uploads.
+- **Payment Processing**: Stripe is used to process payments securely.
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- Node.js (v14.x or later)
+- Yarn or npm
+- A NeonDB account
+- A Kinde account
+- A Stripe account
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Installation
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. Clone the repository:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+    ```bash
+    git clone https://github.com/yourusername/casesandcovers.git
+    cd casesandcovers
+    ```
 
-## Learn More
+2. Install dependencies:
 
-To learn more about Next.js, take a look at the following resources:
+    ```bash
+    yarn install
+    # or
+    npm install
+    ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+3. Set up environment variables:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+    Create a `.env.local` file in the root of the project and add the following environment variables:
 
-## Deploy on Vercel
+    ```env
+    DATABASE_URL=your_neondb_connection_string
+    NEXT_PUBLIC_KIND_API_KEY=your_kinde_api_key
+    NEXT_PUBLIC_STRIPE_PUBLIC_KEY=your_stripe_public_key
+    STRIPE_SECRET_KEY=your_stripe_secret_key
+    ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+4. Run database migrations:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+    ```bash
+    npx prisma migrate dev
+    ```
+
+5. Start the development server:
+
+    ```bash
+    yarn dev
+    # or
+    npm run dev
+    ```
+
+    The app should now be running on [http://localhost:3000](http://localhost:3000).
+
+## Deployment
+
+This project is deployed using Vercel. To deploy your own version:
+
+1. Connect your repository to Vercel.
+2. Set up the necessary environment variables in Vercel dashboard.
+3. Deploy your application.
+
+## Contributing
+
+Contributions are welcome! Please fork the repository and create a pull request with your changes.
+
+## License
+
+This project is licensed under the MIT License.
+
+## Acknowledgements
+
+- [Next.js](https://nextjs.org/)
+- [NeonDB](https://neon.tech/)
+- [Prisma](https://www.prisma.io/)
+- [Kinde](https://kinde.com/)
+- [Upload Thing](https://uploadthing.com/)
+- [Stripe](https://stripe.com/)
+- [Vercel](https://vercel.com/)
+
+## Contact
+
+For any inquiries or issues, please reach out to [Aishan Irfan](https://aishanirfan.netlify.app/).
+
+---
+
+Happy customizing and shopping at CasesAndCovers!
