@@ -78,8 +78,8 @@ export async function POST(req: Request){
                             postalCode : billingAddress!.postal_code!,
                             street : billingAddress!.line1!,
                             state: billingAddress!.state!,
-                    }
-                })
+                    },
+                }),
             })
         }
 
