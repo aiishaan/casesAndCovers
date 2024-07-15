@@ -14,6 +14,7 @@ Check out the live site: [CasesAndCovers](https://casesandcovers.vercel.app/)
 - **Authentication**: [Kinde](https://kinde.com/)
 - **Image Uploads**: [Upload Thing](https://uploadthing.com/)
 - **Payments**: [Stripe](https://stripe.com/)
+- **Email Confirmation**: [Resend](https://resend.com/)
 
 ## Features
 
@@ -22,6 +23,7 @@ Check out the live site: [CasesAndCovers](https://casesandcovers.vercel.app/)
 - **Fast and Reliable Database**: NeonDB and Prisma are used for efficient data management and retrieval.
 - **Image Uploads**: Upload Thing is integrated for handling custom image uploads.
 - **Payment Processing**: Stripe is used to process payments securely.
+- **Confirmation Email**: Resend is used to send order confirmation emails to the customers.
 
 ## Getting Started
 
