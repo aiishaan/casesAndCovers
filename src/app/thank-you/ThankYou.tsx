@@ -45,8 +45,28 @@ const ThankYou = () => {
        <div className="bg-white">
         <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
             <div className="max-w-xl">
-                <h1 className="text-base font-medium text-primary">Thank you!</h1>
-                <p className="mt-2 text-4xl font-bold tracking-tight sm:text-5xl"></p>
+                <p className="text-base font-medium text-primary">Thank you!</p>
+                <h1 className="mt-2 text-4xl font-bold tracking-tight sm:text-5xl">Your case is on the way!</h1>
+                <p className="mt-2 text-base text-zinc-500">We've received your order and are preparing it for shipment.</p>
+
+                <div className="mt-12 text-sm font-medium">
+                    <p className="text-zinc-900">Order number</p>
+                    <p className="mt-2 text-zinc-500">{orderId}</p>
+                </div>
+            </div>
+
+            <div className="mt-10 border-t border-x-zinc-200">
+                <div className="mt-10 flex flex-auto flex-col">
+                    <h4 className="font-semibold text-zinc-900">You made a great choice!</h4>
+                    <p className="mt-2 text-sm text-zinc-600">
+                        We at casesandcovers believe that a phone case doesn't only need to look good, it also needs to feel good and last you for years
+                        That's why we offer a <span className="bg-green-600 text-white px-1 py-0.5">5-year print guarantee</span> : If your case isn't of the quality you expect, we'll replace it for free.
+                    </p>
+                </div>
+            </div>
+
+            <div className="flex space-x-6 overflow-hidden mt-4 rounded-xl bg-gray-900/5 ring-1 ring-inset ring-gray-900/10 lg:rounded-2xl">
+                
             </div>
         </div>
        </div>
